@@ -47,6 +47,9 @@ function App() {
           </TabsList>
 
           <TabsContent value="events" className="space-y-4">
+            <Button onClick={() => console.log("New event button clicked")}>
+              New Event
+            </Button>
             {events.map((event) => (
               <Card key={event.name}>
                 <CardHeader>
