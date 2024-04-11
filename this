@@ -1,0 +1,14 @@
+const events = [
+  {
+    name: "Conference",
+    description: "Annual company conference",
+  },
+  {
+    name: "Gala",
+    description: "Fundraising gala dinner",
+  },
+  {
+    name: "Product Launch",
+    description: "Launch event for new product line",
+  },
+];
