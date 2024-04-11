@@ -8,6 +8,21 @@ import "./App.css";
 function App() {
   const [activeTab, setActiveTab] = useState("events");
 
+  const events = [
+    { 
+      name: "Conference",
+      description: "Annual company conference"
+    },
+    {
+      name: "Gala",
+      description: "Fundraising gala dinner"
+    },
+    {
+      name: "Product Launch",
+      description: "Launch of new software product"
+    }
+  ];
+
   return (
     <>
       <header className="flex items-center justify-between p-4 border-b">
@@ -31,15 +46,17 @@ function App() {
             <TabsTrigger value="bookings">Bookings</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="events">
-            <Card>
-              <CardHeader>
-                <CardTitle>Events</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>Manage your events here.</p>
-              </CardContent>
-            </Card>
+          <TabsContent value="events" className="space-y-4">
+            {events.map((event) => (
+              <Card key={event.name}>
+                <CardHeader>
+                  <CardTitle>{event.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>{event.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </TabsContent>
 
           <TabsContent value="venues">
