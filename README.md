@@ -1,7 +1,7 @@
 # event-planner
 
-Create a basic app structure for an event management app using Chakra UI components. The app should have:
-- A header with a logo and navigation links
+Create a basic app structure for an event management app using the shadcn components. The app should have:
+- A header with a logo and navigation links 
 - A main content area
 - A footer with a copyright notice
 
